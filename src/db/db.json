@@ -1,0 +1,156 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Eduardo Silva",
+      "cpf": "12345678909",
+      "email": "mail@mail.com",
+      "celular": "15959595959",
+      "curso": "1"
+    },
+    {
+      "id": "55",
+      "senha": "123456",
+      "nome": "Leandro",
+      "cpf": "123456",
+      "email": "leandrodsdias@hotmail.com",
+      "curso": "1",
+      "celular": "15959595959",
+      "admin": true
+    },
+    {
+      "id": "2",
+      "senha": "123456",
+      "nome": "André Silva",
+      "cpf": "42756456452",
+      "email": "teste@mail.com",
+      "celular": "158686868686",
+      "curso": "2",
+      "admin": true
+    },
+    {
+      "id": "3",
+      "senha": "123456",
+      "nome": "Luis Silva",
+      "cpf": "98765432105",
+      "email": "teste@teste.com",
+      "celular": "157676767676",
+      "curso": "2",
+      "admin": false
+    },
+    {
+      "id": "573a",
+      "senha": "123456",
+      "nome": "Nome Completo",
+      "cpf": "12387945685",
+      "email": "email@mail.com",
+      "celular": "15949494949",
+      "curso": "2",
+      "admin": false
+    },
+    {
+      "nome": "José Silva",
+      "senha": "123456",
+      "cpf": "4567893154",
+      "email": "email@mail.com",
+      "celular": "15949494949",
+      "curso": "3",
+      "id": "11fb",
+      "admin": false
+    }
+  ],
+  "disciplinas": [
+    {
+      "id":"1",
+      "nome":"Lógica de Programação",
+      "semestre":"1",
+      
+      "curso":"1"
+    },
+    {
+      "id":"2",
+      "nome":"Java",
+      "semestre":"1",
+      
+      "curso":"1"
+    },
+    {
+      "id":"3",
+      "nome":"Banco de Dados",
+      "semestre":"1",
+      
+      "curso":"1"
+    },
+    {
+      "id":"4",
+      "nome":"Git e Github",
+      "semestre":"1",
+      
+      "curso":"1"
+    },
+    {
+      "id":"5",
+      "nome":"HTML",
+      "semestre":"2",
+      
+      "curso":"1"
+    },
+    {
+      "id":"6",
+      "nome":"CSS",
+      "semestre":"2",
+      
+      "curso":"1"
+    },
+    {
+      "id":"7",
+      "nome":"Javascript",
+      "semestre":"2",
+      
+      "curso":"1"
+    },
+    {
+      "id":"8",
+      "nome":"Angular",
+      "semestre":"2",
+      
+      "curso":"1"
+    },
+    {
+      "id":"9",
+      "nome":"Integração Backend e Frontend",
+      "semestre":"3",
+      
+      "curso":"1"
+    },
+    {
+      "id":"10",
+      "nome":"Testes",
+      "semestre":"3",
+      
+      "curso":"1"
+    },
+    {
+      "id":"11",
+      "nome":"Deploy",
+      "semestre":"3",
+      "disciplina":"1",
+      "curso":"1"
+    }
+  ],
+  "cursos": [
+    {
+      "id":"1",
+      "nome":"Backend"
+    },
+    {
+      "id":"2",
+      "nome":"Frontend"
+    },
+    {
+      "id":"3",
+      "nome":"Fullstack"
+    }
+  ]
+
+}
