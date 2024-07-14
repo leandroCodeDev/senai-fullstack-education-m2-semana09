@@ -1,142 +1,50 @@
 # SENAI Fullstack [Education]
 
-## Resolução dos exercícios da Semana 08 - Módulo 02
+## Resolução dos exercícios da Semana 09 - Módulo 02
 
-### M2S08 | Roteiro Projeto: Portal Educational - parte 2
+### M2S09 | Roteiro Projeto: Portal Educational - parte 3
 
-Olá!
+E ai. futuro dev's?? Acharam que o projeto do portal educational iria acabar né? Mas não, ainda iremos utilizar ele para essa semana. Nesta semana, iremos dar um foco maior na organização e estilização do seu projeto. Para isso, utilize o conhecimento visto durante essa semana para aplicar no projeto criado na semana 07 e 08.
 
-Nesta semana, vamos continuar com o nosso projeto de Portal Educacional, complementando-o com as funcionalidades que faltaram, e aprimorando as que já temos construídas.
+‌Bom código e bebam água ^-^ !!
 
-### M2S08 | Ex. 01 - Criação do header
+### M2S09 | Ex. 01 - Modularização
 
-Neste primeiro exercício, vamos criar o header da nossa aplicação.
+Crie uma estrutura dos componentes compartilhados da aplicação:
 
-Ele será apresentado em todas as telas do sistema, EXCETO a tela de login.
+Na pasta shared, crie um módulo de mesmo nome. Após isso, altere os metadados do módulo shared para importar e exportar todos os componentes das subpastas de shared.
 
-Ele irá conter:
+### M2S09 | Ex. 02 - Organização
 
-- Alinhado a esquerda:
-  - O logo do nosso portal estudantil (logo a livre escolha).
-- Alinhado a direita:
-  - O nome do usuário logado.
-  - Um avatar/ícone do usuário que ao ser clicado abrirá a opção de ‘Sair’.
-    - Caso o botão de Sair seja clicado, o usuário será deslogado e será redirecionado para a tela de login.
+Para agrupar mais ainda nossos módulos, crie uma pasta para receber todos os componentes de páginas do projeto com o nome de **‘pages’**. Não se esqueça de corrigir os importes. Faça o mesmo com a pasta de shared, ela deve ficar dentro da pasta de app.
 
-### M2S08 | Ex. 02 - Criação do sidebar
+### M2S09 | Ex. 03 - Pré-processadores com SCSS
 
-Agora, iremos criar o sidebar da nossa aplicação.
+Agora, vamos migrar nosso projeto para utilizar o pré-processador SASS - SCSS. Siga o seguinte passo a passo:
 
-Ele deverá ser apresentado em todas as telas do sistema, EXCETO a tela de login.
+- Instale a biblioteca schematics-scss-migrate (**npm i --save-dev schematics-scss-migrate**);
+- Execute a migração da biblioteca, através do comando **ng g schematics-scss-migrate:scss-migrate;**
+- A mudança deve ser feita do CSS para SCSS;
+- Execute a aplicação localmente para visualizar se as alterações foram realizadas com sucesso (realize ajustes pontuais se necessário);
+- Caso já esteja utilizando SCSS verifique em seus arquivos de estilização se você está utilizando o alinhamento e nested selectors corretamente, caso não, converta para fazer o uso correto.
 
-Ele irá conter:
+### M2S09 | Ex. 04 - Responsividade
 
-- Botão Disciplinas
-  - Que, ao ser clicado, irá redirecionar para tela de disciplinas.
-- Botão Atividades Avaliativas
-  - Que não terá ação.
-- Botão Solicitações
-  - Que não terá ação.
-- Botão Biblioteca Online
-  - Que não terá ação.
-- Botão Usuários
-  - O botão usuários só deverá ser apresentados para usuários administradores, não sendo apresentado para alunos.
-  - Ao ser clicado, o botão deverá redirecionar para a tela de listagem de usuários.
+Utilizando o media query, os 3 breakpoints principais de visualização (480px, 768px e 1024px) e o conceito de mobile first, vamos deixar a **home** (tela inicial) da nossa aplicação responsivo para:
 
-### M2S08 | Ex. 03 - Tratar login
+- Dispositivos de até 480px;
+- Dispositivos de 480px até 768px;
+- Dispositivos de 768px até 1024px;
+- Dispositivos a partir de 1024px.
 
-Para iniciarmos o tratamento de login, vamos criar um mock de usuários cadastrados. Cada objeto desse mock representará um usuário do sistema e, ele deverá conter:
+### M2S09 | Ex. 05 - Uso de Lib externa
 
-- e-mail;
-- senha;
-- admin (flag para indicar se o usuário é administrador ou não).
+Para estilizar mais o seu projeto, vamos instalar e importar a biblioteca do angular material no projeto. Faça as modificações necessárias no projeto para utilizar a biblioteca sem problema nenhum no projeto.
 
-Após criado o mock, vamos criar uma service que será responsável por gerenciar o fluxo de login:
+### M2S09 | Ex. 06 - Angular material, parte 1
 
-Ela deverá conter duas funções:
+Modifique toda a página de login a fim de usar os componentes de input, botão, card, diolog (para o modal de reset de senha) e qualquer outro que julgue necessário.
 
-- logar:
-  - A função logar receberá o usuário e senha digitados na tela de login; irá procurar na nossa lista de usuários cadastrados (mock) e, caso o usuário exista e a senha esteja correta, irá armazenar esse usuário como usuário logado na SESSION STORAGE e retornará sucesso; caso contrário, essa função retornará um erro.
-- deslogar
-  - Função que irá retirar o usuário logado da SESSION STORAGE.
+### M2S09 | Ex. 07 - Angular material, parte 2
 
-\--
-
-Após criado o mock e a service, integre esse serviço aos componentes de login e ao header.
-
-### M2S08 | Ex. 04 - Tratar alunos
-
-Nesta atividade, vamos criar uma service que será responsável pelo tratamento do fluxo de alunos. Esta service irá conter:
-
-- getAlunos:
-  - Função que retornará as informações todos os alunos cadastrados em sistema;
-- getAluno:
-  - Função que retornará as informações de um aluno específico;
-- cadastrarAluno:
-  - Função que irá criar um novo registro de aluno com base nos dados enviados;
-- excluirAluno:
-  - Função que irá excluir um aluno específico;
-
-Após criada a service, realize a integração desta com os componentes de listagem de alunos e de cadastro de aluno.
-
-_**PS.:** Os nome das função são sugestão. Fique livre para alterar de acordo com o padrão que você estiver utilizando._
-
-### M2S08 | Ex. 05 - Mock Cursos e Disciplinas
-
-Esta atividade consiste em estruturarmos os mocks de cursos e disciplinas que exibiremos em nosso sistema.
-
-Primeiramente, vamos criar um mock de cursos. Nele, teremos uma lista de cursos disponíveis em nosso sistema (identificador e nome do curso).
-
-Depois, construiremos o mock de disciplinas, onde teremos uma lista de todas as disciplinas por curso (nome da disciplina, curso, semestre).
-
-A forma de construção desses mocks e suas vinculações é livre.
-
-### M2S08 | Ex. 06 - Tratar cursos e disciplinas
-
-Nesse exercício, vamos construir duas services, uma para os cursos e outra para as disciplinas.
-
-A service de cursos irá conter:
-
-- getCursos
-  - Função para retornar a listagem de todos os cursos disponíveis em sistema;
-
-Após a construção da service, integrá-la à tela de cadastro de alunos.
-
-\--
-
-A service de disciplinas irá conter:
-
-- getDisciplinasCurso
-  - Função que irá retornar todas as disciplinas para um determinado curso;
-- getDisciplinasCursoSemestre
-  - Função que, a partir do curso e do semestre desejado, irá retornar as disciplinas daquele semestre para aquele curso;
-
-Após a construção da service, integrá-la às telas de disciplinas e tela inicial/home.
-
-# SenaiFullstackEducationM2Semana08
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Na tela de início, troque no **mínimo** 3 elementos visuais para receber qualquer componente do angular material.
