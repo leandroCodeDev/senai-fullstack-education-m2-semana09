@@ -7,7 +7,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { HeaderComponent } from '../shared/components/header/header.component';
 import { UsuariosService } from '../shared/services/usuarios/usuarios.service';
 import { UsuarioInterface } from '../shared/interfaces/usuario.interface';
 import { CursoInterface } from '../shared/interfaces/curso.interface';
@@ -15,7 +14,7 @@ import { CursoInterface } from '../shared/interfaces/curso.interface';
 @Component({
   selector: 'app-alunos',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink, HeaderComponent,CommonModule],
+  imports: [ReactiveFormsModule, RouterLink, CommonModule],
   templateUrl: './alunos.component.html',
   styleUrl: './alunos.component.scss',
 })

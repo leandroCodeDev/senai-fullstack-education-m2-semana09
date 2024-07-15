@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from '../shared/components/header/header.component';
 import { DisciplinaInterface } from '../shared/interfaces/disciplina.interface';
 import { DisciplinasService } from '../shared/services/disciplinas/disciplinas.service';
 import { AutenticarService } from '../shared/services/autenticar/autenticar.service';
@@ -15,7 +14,7 @@ interface User{
 @Component({
   selector: 'app-disciplinas',
   standalone: true,
-  imports: [RouterModule, HeaderComponent,CommonModule],
+  imports: [RouterModule,CommonModule],
   templateUrl: './disciplinas.component.html',
   styleUrl: './disciplinas.component.scss',
 })

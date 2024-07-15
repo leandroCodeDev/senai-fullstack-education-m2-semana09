@@ -16,7 +16,7 @@ import { CursoInterface } from '../shared/interfaces/curso.interface';
 @Component({
   selector: 'app-cadastro-aluno',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, RouterLink, HeaderComponent],
+  imports: [ReactiveFormsModule, CommonModule, RouterLink],
   templateUrl: './cadastro-aluno.component.html',
   styleUrl: './cadastro-aluno.component.scss',
 })

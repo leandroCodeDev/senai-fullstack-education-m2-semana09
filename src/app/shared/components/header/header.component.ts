@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { AutenticarService } from '../../services/autenticar/autenticar.service';
+import { Router } from '@angular/router';
 
 interface User{
   nome:String,
@@ -9,8 +10,7 @@ interface User{
 }
 @Component({
   selector: 'app-header',
-  standalone: true,
-  imports: [SidebarComponent,CommonModule],
+  standalone: false,
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -18,7 +18,7 @@ export class HeaderComponent {
   @Input() user:User = {nome:"lorem",admin:false}
   showSideBar = false
 
-constructor(private AutenticarService:AutenticarService){}
+constructor(private AutenticarService:AutenticarService, private router: Router){}
 
   ngOnInit(){
     let usuariologado = this.AutenticarService.getCredenciais()
