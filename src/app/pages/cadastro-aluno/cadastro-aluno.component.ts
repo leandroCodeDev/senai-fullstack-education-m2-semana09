@@ -7,11 +7,10 @@ import {
   Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { HeaderComponent } from '../shared/components/header/header.component';
-import { UsuariosService } from '../shared/services/usuarios/usuarios.service';
-import { UsuarioInterface } from '../shared/interfaces/usuario.interface';
-import { CursosService } from '../shared/services/cursos/cursos.service';
-import { CursoInterface } from '../shared/interfaces/curso.interface';
+import { UsuariosService } from '../../shared/services/usuarios/usuarios.service';
+import { UsuarioInterface } from '../../shared/interfaces/usuario.interface';
+import { CursosService } from '../../shared/services/cursos/cursos.service';
+import { CursoInterface } from '../../shared/interfaces/curso.interface';
 
 @Component({
   selector: 'app-cadastro-aluno',

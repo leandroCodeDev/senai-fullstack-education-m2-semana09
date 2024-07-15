@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { DisciplinaInterface } from '../shared/interfaces/disciplina.interface';
-import { DisciplinasService } from '../shared/services/disciplinas/disciplinas.service';
-import { AutenticarService } from '../shared/services/autenticar/autenticar.service';
-import { CursosService } from '../shared/services/cursos/cursos.service';
-import { CursoInterface } from '../shared/interfaces/curso.interface';
+import { DisciplinaInterface } from '../../shared/interfaces/disciplina.interface';
+import { DisciplinasService } from '../../shared/services/disciplinas/disciplinas.service';
+import { AutenticarService } from '../../shared/services/autenticar/autenticar.service';
+import { CursosService } from '../../shared/services/cursos/cursos.service';
+import { CursoInterface } from '../../shared/interfaces/curso.interface';
 import { CommonModule } from '@angular/common';
 
 

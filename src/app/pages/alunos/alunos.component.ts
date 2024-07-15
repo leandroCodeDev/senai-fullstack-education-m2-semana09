@@ -7,9 +7,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { UsuariosService } from '../shared/services/usuarios/usuarios.service';
-import { UsuarioInterface } from '../shared/interfaces/usuario.interface';
-import { CursoInterface } from '../shared/interfaces/curso.interface';
+import { UsuariosService } from '../../shared/services/usuarios/usuarios.service';
+import { UsuarioInterface } from '../../shared/interfaces/usuario.interface';
+import { CursoInterface } from '../../shared/interfaces/curso.interface';
 
 @Component({
   selector: 'app-alunos',
