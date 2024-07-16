@@ -1,0 +1,12 @@
+.full {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .app {
+      margin: 12px auto;
+    }
+    .flex {
+      flex-direction: column;
+    }
+  }
